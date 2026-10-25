@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: inheritance-odds
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/traits
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: TRUST_PROXY
+        value: "1"
